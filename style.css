@@ -1,0 +1,213 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+@font-face {
+    font-family: 'EthnoFont';
+    src: url('./fonts/ethnocentric_rg.otf'); /* Ensure this path is correct */
+}
+
+/* CSS Variables for Theming */
+:root {
+    --primary-color: #000000; /* Black */
+    --secondary-color: #ffffff; /* White */
+    --accent-color: #777777;   /* Grey */
+    --background-color: #f0f0f0; /* Light Grey */
+    --hover-color: #555555;    /* Dark Grey */
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+}
+
+/* Navigation Bar */
+nav {
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 10px 20px;
+}
+
+.menu li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.menu li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+    color: var(--hover-color);
+}
+
+.menu .logo a {
+    font-family: 'EthnoFont', sans-serif;
+    font-size: 2rem;
+    color: var(--accent-color);
+}
+
+.menu .logo {
+    margin-right: auto;
+}
+
+.menu .dropdown .dropBtn {
+    cursor: pointer;
+}
+
+.menu .dropMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--primary-color);
+    padding: 10px 0;
+    list-style: none;
+    min-width: 150px;
+}
+
+.menu .dropdown:hover .dropMenu {
+    display: block;
+}
+
+.menu .dropMenu li a {
+    display: block;
+    padding: 10px 20px;
+    color: var(--secondary-color);
+}
+
+.menu .dropMenu li a:hover {
+    background-color: var(--hover-color);
+}
+
+/* Header */
+.main-header {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: var(--background-color);
+}
+
+.main-header h1 {
+    font-family: 'EthnoFont', sans-serif;
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.main-header p {
+    font-size: 1.2rem;
+    color: var(--accent-color);
+    margin-top: 20px;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+.profiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile-card {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    margin: 20px;
+    width: 280px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.profile-card img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.card-content .btn {
+    text-decoration: none;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.card-content .btn:hover {
+    background-color: var(--hover-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    color: var(--secondary-color);
+    font-size: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .profiles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-card {
+        width: 90%;
+    }
+
+    .main-header h1 {
+        font-size: 2.5rem;
+    }
+}
