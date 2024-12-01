@@ -3,11 +3,16 @@
 
 /* CSS Variables for Theming */
 :root {
-    --primary-color: #000000; /* Black */
-    --secondary-color: #ffffff; /* White */
-    --accent-color: #777777;   /* Grey */
-    --background-color: #f0f0f0; /* Light Grey */
-    --hover-color: #555555;    /* Dark Grey */
+    --primary-color: #000000;
+    /* Black */
+    --secondary-color: #ffffff;
+    /* White */
+    --accent-color: #777777;
+    /* Grey */
+    --background-color: #f0f0f0;
+    /* Light Grey */
+    --hover-color: #555555;
+    /* Dark Grey */
 }
 
 /* Reset and Base Styles */
@@ -136,7 +141,8 @@ section {
     backface-visibility: hidden;
 }
 
-.front, .back {
+.front,
+.back {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -151,7 +157,8 @@ section {
 
 .front img {
     width: 80%;
-    height: auto;
+    height: 80%;
+    object-fit: cover;
     border-radius: 50%;
     margin-bottom: 20px;
 }
